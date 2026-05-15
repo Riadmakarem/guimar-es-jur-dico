@@ -3,20 +3,6 @@ import { ArrowRight, BookOpen, Award, Users } from "lucide-react";
 import livro from "@/assets/livro-quando-ambiente-adoece.png";
 
 export const Route = createFileRoute("/livro")({
-  head: () => ({
-    meta: [
-      { title: "Livro: Quando o Ambiente Adoece · Dr. Abraão Guimarães" },
-      {
-        name: "description",
-        content:
-          "'Quando o Ambiente Adoece — Burnout e a luta por qualidade de vida', livro do Dr. Abraão Guimarães. Disponível na Amazon.",
-      },
-      { property: "og:title", content: "Quando o Ambiente Adoece · Livro" },
-      { property: "og:description", content: "Burnout e a luta por qualidade de vida — disponível na Amazon." },
-      { property: "og:url", content: "/livro" },
-    ],
-    links: [{ rel: "canonical", href: "/guimar-es-jur-dico/livro" }],
-  }),
   component: LivroPage,
 });
 

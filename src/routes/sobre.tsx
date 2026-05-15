@@ -5,20 +5,6 @@ import merito from "@/assets/abraao-merito.jpg";
 import { whatsappUrl } from "@/components/site/WhatsAppFab";
 
 export const Route = createFileRoute("/sobre")({
-  head: () => ({
-    meta: [
-      { title: "Sobre · Dr. Abraão Guimarães" },
-      {
-        name: "description",
-        content:
-          "Trajetória do Dr. Abraão Lucas Ferreira Guimarães: advogado OAB/AM 14.788, mestre, professor, coordenador jurídico e escritor.",
-      },
-      { property: "og:title", content: "Sobre · Dr. Abraão Guimarães" },
-      { property: "og:description", content: "Advogado, escritor, mestre e professor." },
-      { property: "og:url", content: "/sobre" },
-    ],
-    links: [{ rel: "canonical", href: "/guimar-es-jur-dico/sobre" }],
-  }),
   component: SobrePage,
 });
 

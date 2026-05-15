@@ -3,20 +3,6 @@ import { Phone, MessageCircle, Mail, MapPin, Clock } from "lucide-react";
 import { whatsappUrl } from "@/components/site/WhatsAppFab";
 
 export const Route = createFileRoute("/contato")({
-  head: () => ({
-    meta: [
-      { title: "Contato · Dr. Abraão Guimarães" },
-      {
-        name: "description",
-        content:
-          "Entre em contato com o Dr. Abraão Guimarães. Atendimento jurídico via WhatsApp: (92) 98217-0123.",
-      },
-      { property: "og:title", content: "Contato · Dr. Abraão Guimarães" },
-      { property: "og:description", content: "WhatsApp: (92) 98217-0123" },
-      { property: "og:url", content: "/contato" },
-    ],
-    links: [{ rel: "canonical", href: "/guimar-es-jur-dico/contato" }],
-  }),
   component: ContatoPage,
 });
 

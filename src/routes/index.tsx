@@ -5,20 +5,6 @@ import livro from "@/assets/livro-quando-ambiente-adoece.png";
 import { whatsappUrl } from "@/components/site/WhatsAppFab";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Dr. Abraão Guimarães · Advocacia OAB/AM 14.788" },
-      {
-        name: "description",
-        content:
-          "Advocacia humanizada com base em pesquisa e ensino. Atendimento jurídico em Manaus/AM com Dr. Abraão Guimarães, autor de 'Quando o Ambiente Adoece'.",
-      },
-      { property: "og:title", content: "Dr. Abraão Guimarães · Advocacia" },
-      { property: "og:description", content: "Advogado · Escritor · Mestre · Professor." },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/guimar-es-jur-dico/" }],
-  }),
   component: HomePage,
 });
 

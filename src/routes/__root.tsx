@@ -1,14 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import {
-  Outlet,
-  Link,
-  createRootRouteWithContext,
-  useRouter,
-  HeadContent,
-  Scripts,
-} from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
+import { Outlet, Link, createRootRoute, useRouter } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
@@ -46,62 +36,19 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Dr. Abraão Guimarães · Advocacia OAB/AM 14.788" },
-      {
-        name: "description",
-        content:
-          "Dr. Abraão Guimarães — advogado, escritor, mestre e professor. Atendimento jurídico humanizado em Manaus/AM.",
-      },
-      { name: "author", content: "Dr. Abraão Guimarães" },
-      { property: "og:title", content: "Dr. Abraão Guimarães · Advocacia" },
-      { property: "og:description", content: "Advocacia, ensino e pesquisa em Direito." },
-      { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Dr. Abraão Guimarães" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [
-      { rel: "stylesheet", href: appCss },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap",
-      },
-    ],
-  }),
-  shellComponent: RootShell,
+export const Route = createRootRoute({
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
 
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="pt-BR">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
-
 function RootComponent() {
-  const { queryClient } = Route.useRouteContext();
   return (
-    <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
-        <Header />
-        <main className="flex-1"><Outlet /></main>
-        <Footer />
-        <WhatsAppFab />
-      </div>
-    </QueryClientProvider>
+    <div className="flex min-h-screen flex-col">
+      <Header />
+      <main className="flex-1"><Outlet /></main>
+      <Footer />
+      <WhatsAppFab />
+    </div>
   );
 }
