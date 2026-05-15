@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
@@ -35,18 +35,30 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Mail size={14} className="text-gold" />
-              <span>contato@abraaoguimaraes.adv.br</span>
+              <a href="mailto:alg.guimaraes.adv@gmail.com" className="hover:text-gold">alg.guimaraes.adv@gmail.com</a>
             </li>
             <li className="flex items-center gap-3">
               <MapPin size={14} className="text-gold" />
               <span>Manaus · Amazonas</span>
             </li>
+            <li className="flex gap-3 pt-2">
+              <a href="https://www.instagram.com/abraaoguimaraes_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-gold">
+                <Instagram size={18} />
+              </a>
+              <a href="https://linkedin.com/in/abraão-guimarães-0b5467bb/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/70 hover:text-gold">
+                <Linkedin size={18} />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-6xl px-6 py-5 text-xs text-primary-foreground/50">
-          © {new Date().getFullYear()} Dr. Abraão Guimarães. Todos os direitos reservados.
+        <div className="mx-auto max-w-6xl px-6 py-5 flex flex-col sm:flex-row items-center justify-between text-xs text-primary-foreground/50">
+          <span>© {new Date().getFullYear()} Dr. Abraão Guimarães. Todos os direitos reservados.</span>
+          <a href="https://chronokairo.com.br/" target="_blank" rel="noopener noreferrer" className="mt-4 sm:mt-0 hover:text-gold transition-colors flex items-center gap-2">
+            <span>Feito por</span>
+            <span className="font-semibold">CHRONOKAIRO</span>
+          </a>
         </div>
       </div>
     </footer>
