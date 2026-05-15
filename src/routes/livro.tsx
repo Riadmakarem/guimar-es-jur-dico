@@ -32,7 +32,7 @@ function LivroPage() {
       <section className="gradient-navy py-20 text-primary-foreground">
         <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 md:grid-cols-2">
           <div className="relative mx-auto md:mx-0">
-            <div className="absolute -inset-6 -z-10 rounded-sm bg-gold/10 blur-2xl" />
+            <div className="absolute -inset-6 -z-10 rounded-sm border border-gold/20" />
             <img src={livro} alt="Livro Quando o Ambiente Adoece" className="max-h-[560px] drop-shadow-2xl" />
           </div>
           <div>

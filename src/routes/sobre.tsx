@@ -101,13 +101,13 @@ function SobrePage() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-sm bg-navy px-6 py-3 text-sm text-primary-foreground hover:bg-navy-deep"
+                className="inline-flex items-center gap-2 rounded-sm bg-gold px-6 py-3 text-sm font-medium text-navy-deep hover:shadow-gold"
               >
                 Solicitar atendimento <ArrowRight size={16} />
               </a>
               <Link
                 to="/livro"
-                className="inline-flex items-center gap-2 rounded-sm border border-navy/30 px-6 py-3 text-sm text-navy hover:bg-secondary"
+                className="inline-flex items-center gap-2 rounded-sm border border-gold/35 px-6 py-3 text-sm text-navy hover:bg-secondary"
               >
                 Conhecer o livro
               </Link>
