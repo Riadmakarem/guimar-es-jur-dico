@@ -15,7 +15,7 @@ export const Route = createFileRoute("/contato")({
       { property: "og:description", content: "WhatsApp: (92) 98217-0123" },
       { property: "og:url", content: "/contato" },
     ],
-    links: [{ rel: "canonical", href: "/contato" }],
+    links: [{ rel: "canonical", href: "/guimar-es-jur-dico/contato" }],
   }),
   component: ContatoPage,
 });

@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Advogado · Escritor · Mestre · Professor." },
       { property: "og:url", content: "/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "/guimar-es-jur-dico/" }],
   }),
   component: HomePage,
 });

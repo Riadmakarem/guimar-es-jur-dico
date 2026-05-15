@@ -15,7 +15,7 @@ export const Route = createFileRoute("/livro")({
       { property: "og:description", content: "Burnout e a luta por qualidade de vida — disponível na Amazon." },
       { property: "og:url", content: "/livro" },
     ],
-    links: [{ rel: "canonical", href: "/livro" }],
+    links: [{ rel: "canonical", href: "/guimar-es-jur-dico/livro" }],
   }),
   component: LivroPage,
 });

@@ -17,7 +17,7 @@ export const Route = createFileRoute("/sobre")({
       { property: "og:description", content: "Advogado, escritor, mestre e professor." },
       { property: "og:url", content: "/sobre" },
     ],
-    links: [{ rel: "canonical", href: "/sobre" }],
+    links: [{ rel: "canonical", href: "/guimar-es-jur-dico/sobre" }],
   }),
   component: SobrePage,
 });
